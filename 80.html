@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>80</title>
+</head>
+<body>
+    <div class="piano">
+        <div class="blank blank-left"></div>
+        <div class="blank blank-left blank-right"></div>
+        <div class="blank blank-right"></div>
+        <div class="blank blank-left"></div>
+        <div class="blank blank-left blank-right"></div>
+        <div class="blank blank-left blank-right"></div>
+        <div class="blank blank-right"></div>
+      </div>
+      <style>
+        body {
+          background-color: #998235;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .piano {
+          width: 180px;
+          height: 95px;
+          background-color: #191919;
+          border-radius: 10px;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: flex-end;
+          padding-bottom: 5px;
+        }
+        .blank {
+          width: 20px;
+          height: 74%;
+          background-color: #FFFFFF;
+          border-radius: 5px;
+          position: relative;
+        }
+        .blank-left::after {
+          content: '';
+          width: 25%;
+          height: 50%;
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          background-color: #000000;
+        }
+        .blank-right::before {
+          content: '';
+          width: 25%;
+          height: 50%;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: #000000;
+        }
+      </style>
+</body>
+</html>
